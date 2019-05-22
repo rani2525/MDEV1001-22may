@@ -63,7 +63,12 @@ db.serialize(function(){
         
         },
         function(err,count){
-            console.log("History" + ":" +depts["History"] +"yearly");
+            //console.log("History" + ":" +depts["History"] +"yearly");
+            let keys = Object.keys(depts);
+
+            for(let i=0; i != keys.length; i++){
+                console.log(keys[i] + ";" +depts[keys[i]] + " yearly");
+            }
         });
 
     });
